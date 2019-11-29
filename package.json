@@ -1,0 +1,12 @@
+{
+  "name": "moderation",
+  "version": "1.0.2",
+  "description": "Simple Moderation addon to easily do easily kick/ban members and much more.",
+  "main": "index.js",
+  "peerDependencies": {
+    "@botbind/klasa": "0.5.4-dev"
+  },
+  "keywords": [],
+  "author": "Bot Bind",
+  "license": "ISC"
+}
