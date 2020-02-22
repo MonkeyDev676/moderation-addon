@@ -13,12 +13,12 @@ module.exports = class extends Command {
   }
 
   async run(msg, [member, reason]) {
-    if (member.id === msg.author.id) throw "You cannot kick yourself.";
-    if (member.id === this.client.user.id) throw "I cannot kick myself.";
+    if (member.id === msg.author.id) throw "Cannot kick yourself.";
+    if (member.id === this.client.user.id) throw "Cannot kick myself.";
 
     if (member.roles.highest.position >= msg.member.roles.highest.position)
-      throw "You cannot kick this user.";
-    if (!member.kickable) throw "I cannot kick this user.";
+      throw "We failed to kick user.";
+    if (!member.kickable) throw "I Failed to kick this user.";
 
     await member.kick(reason);
     return msg.sendMessage(
